@@ -1,0 +1,158 @@
+.chooseUs {
+  text-align: center;
+  padding-block-end: 6.25em;
+
+  @media (min-width: 65rem) {
+    text-align: left;
+  }
+}
+
+.chooseUsWrap {
+  display: grid;
+  @media (min-width: 65rem) {
+    gap: 0;
+    grid-template-columns:
+      minmax(1.18rem, 1fr)
+      repeat(2, minmax(0, 40rem))
+      minmax(1.18rem, 1fr);
+  }
+}
+
+.chooseUsDes h1,
+.chooseUsDes h5 {
+  text-align: center;
+  margin-block-end: 1em;
+
+  @media (min-width: 65rem) {
+    text-align: left;
+  }
+}
+
+.chooseUsDes {
+  @media (min-width: 65rem) {
+    grid-column: 2;
+  }
+}
+
+.chooseUsDes h1 {
+  line-height: 1.3;
+  @media (min-width: 48rem) {
+    font-size: 2.5rem;
+  }
+}
+
+.chooseUsDes > div p {
+  font-weight: 500;
+  max-width: 420px;
+  margin-inline: auto;
+
+  @media (min-width: 65rem) {
+    margin-inline: unset;
+  }
+}
+
+.choseCardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  margin-block: 4.68em 7.12em;
+
+  @media (min-width: 48rem) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.choseCardsContainer :is(.icon, h3, p) {
+  margin-block-start: 1em;
+}
+
+.choseCardsContainer .icon {
+  width: 3.125em;
+  height: 3.25em;
+  margin-inline: auto;
+  background-color: rgb(var(--clr-sec));
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+
+  @media (min-width: 65rem) {
+    margin-inline: unset;
+  }
+}
+
+.choseCardsContainer svg {
+  width: 1.125em;
+  height: 1.25em;
+  fill: rgb(255 255 255);
+}
+
+.choseCardsContainer h3 {
+  font-size: 1.25rem;
+  color: rgba(var(--clr-bg) / 0.9);
+}
+
+.choseCardsContainer p {
+  max-width: 35ch;
+  margin-inline: auto;
+  font-weight: 500;
+}
+
+.chooseUsImg {
+  position: relative;
+  isolation: isolate;
+
+  @media (min-width: 65rem) {
+    grid-column: 3;
+  }
+}
+
+.chooseUsImg > *:first-child {
+  margin-block-end: 1.5em;
+}
+
+.choosePicture1 img,
+.choosePicture2 img {
+  border-radius: 24px;
+  margin-inline: auto;
+}
+
+.choosePicture3,
+.choosePicture4 {
+  display: none;
+
+  @media (min-width: 48rem) {
+    display: block;
+    position: absolute;
+  }
+}
+
+.choosePicture3 {
+  @media (min-width: 48rem) {
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transform: translateY(-50%) translateX(5%);
+  }
+
+  @media (min-width: 65rem) {
+    transform: none;
+    right: -30px;
+    top: 20px;
+  }
+}
+
+.choosePicture4 {
+  @media (min-width: 48rem) {
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateY(30%) translateX(50%);
+
+    @media (min-width: 65rem) {
+      bottom: 100px;
+      left: 0;
+      transform: none;
+    }
+  }
+}

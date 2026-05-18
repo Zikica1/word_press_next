@@ -1,0 +1,71 @@
+.team {
+  background-color: rgb(243, 244, 246);
+  text-align: center;
+  padding: 6.28em 2.18em 18.25em;
+}
+
+.teamWrapper {
+  display: grid;
+  gap: 50px;
+  grid-auto-flow: dense;
+
+  @media (min-width: 65rem) {
+    grid-template-columns:
+      minmax(1.18rem, 1fr)
+      repeat(2, minmax(0, 40rem))
+      minmax(1.18rem, 1fr);
+    gap: 0;
+  }
+}
+
+.teamDescription {
+  @media (min-width: 65rem) {
+    grid-column: 3;
+    text-align: left;
+    padding-inline-start: clamp(100px, 9.5vw, 127px);
+  }
+}
+
+.teamHeading h2 {
+  margin-block: 1em 0.5em;
+}
+
+.teamDescription p {
+  margin-block-end: 36px;
+}
+
+.team .teamPictures {
+  @media (min-width: 65rem) {
+    grid-column: 2;
+  }
+}
+
+.teamPicturesWrap {
+  position: relative;
+}
+
+.teamPicturesWrap img {
+  border-radius: 20px;
+}
+
+.teamImg2 {
+  position: absolute;
+  max-width: 70%;
+  bottom: -120px;
+  right: 0;
+
+  @media (min-width: 65rem) {
+    max-width: 80%;
+  }
+}
+
+.teamImg3 {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    bottom: -50px;
+    right: 390px;
+  }
+}

@@ -139,3 +139,8 @@ a.secondary {
     --button-secondary-border: #1a1a1a;
   }
 }
+
+.home .blogImg {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,38 @@
+.post {
+  background-color: #f3f4f6;
+  padding: 100px 35px 35px;
+}
+
+.postImg {
+  border-radius: 16px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  margin-inline: auto;
+}
+
+.postWrapper {
+  color: rgb(26 31 47);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.postTitle {
+  font-size: 1.562rem;
+  margin-block: 2em;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.postData {
+  text-align: center;
+  margin-block-end: 3.125em;
+  line-height: 1.5;
+}
+
+.postContent p {
+  margin-block-end: 1.2em;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 700px;
+}

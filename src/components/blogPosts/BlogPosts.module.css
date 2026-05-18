@@ -1,0 +1,12 @@
+.blogs {
+  background-color: #f3f4f6;
+  padding: 6.25em 2.1875em 0;
+}
+
+.blogWrapper {
+  @media (min-width: 48rem) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(330px, 100%), 1fr));
+    gap: 1em;
+  }
+}

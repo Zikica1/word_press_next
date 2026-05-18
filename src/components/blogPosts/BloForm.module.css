@@ -1,0 +1,121 @@
+.blogTagsDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.875em;
+  margin-block: 2.81em;
+  border-top: 1px solid rgb(212, 212, 212);
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.blogTagsDetail div {
+  display: flex;
+  gap: 1.5em;
+}
+
+.blogTagsDetail p {
+  color: #3d3d3d;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.blogTagsDetail svg {
+  fill: rgb(37, 46, 54);
+  cursor: pointer;
+}
+
+.blogTagsDetail svg:hover {
+  fill: rgb(var(--clr-pri));
+}
+
+.blogTagsDetail div > *:first-child {
+  width: 1.875em;
+  height: 1.875em;
+}
+
+.blogTagsDetail div > *:last-child {
+  width: 1.56em;
+  height: 1.62em;
+}
+
+.blogCommentDetail h3 {
+  color: rgb(0 0 0);
+  font-size: 2.5rem;
+  margin-block: 3px 9px;
+}
+
+.blogCommentDetail p {
+  font-size: 0.937rem;
+  margin-block-end: 2.66em;
+}
+
+.blogCommentDetail h3 {
+  color: rgb(0 0 0);
+  font-size: 2.5rem;
+  margin-block: 3px 9px;
+}
+
+.blogCommentDetail p {
+  font-size: 0.937rem;
+  margin-block-end: 2.66em;
+}
+
+.formBlog div {
+  @media (min-width: 34.375rem) {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+  }
+}
+
+.formBlog div > * {
+  flex: 1;
+}
+
+.formBlog label {
+  display: block;
+  margin-block-end: 1.25em;
+}
+
+.formBlog :is(input, textarea) {
+  background: rgb(255 255 255);
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  line-height: 1.5;
+  font-size: inherit;
+  font-family: inherit;
+  outline: none;
+}
+
+.formBlog textarea {
+  min-height: 15em;
+}
+
+.formBlog button {
+  color: rgb(255 255 255);
+  background-color: rgb(var(--clr-pri));
+  border: none;
+  width: 100%;
+  padding: 1.25em 3.125em;
+  border-radius: 30px;
+  box-shadow: 0 15px 25px 5px rgba(var(--clr-pri) / 0.25);
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  @media (min-width: 34.375rem) {
+    display: block;
+    width: unset;
+    margin-inline-start: auto;
+  }
+}
+
+.formBlog button:hover,
+.formBlog button:focus-visible {
+  background-color: rgb(var(--clr-sec));
+  box-shadow: 0 15px 25px 5px rgba(var(--clr-sec) / 0.25);
+}

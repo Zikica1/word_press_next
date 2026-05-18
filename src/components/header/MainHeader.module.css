@@ -1,0 +1,8 @@
+.header {
+  min-height: 7.25em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline-end: 2.18em;
+  background-color: rgb(243, 244, 246);
+}

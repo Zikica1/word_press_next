@@ -1,0 +1,38 @@
+.pricing {
+  --text-color: rgb(171, 175, 199);
+  --text-color-2: rgb(18, 26, 36);
+
+  color: rgb(255 255 255);
+  background-color: rgb(var(--clr-bg));
+  padding: 6.28em 2.18em 12em;
+  text-align: center;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.pricing h2 {
+  color: rgb(255 255 255);
+  max-width: 30ch;
+  margin-inline: auto;
+  margin-block-end: 2.66em;
+
+  @media (min-width: 48rem) {
+    margin-block-end: 2.56em;
+  }
+}
+
+.pricingCardsContainer {
+  display: grid;
+
+  @media (min-width: 65rem) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pricingCardsContainer > *:not(:last-child) {
+  margin-block-end: 8em;
+
+  @media (min-width: 65rem) {
+    margin-block-end: 0;
+  }
+}

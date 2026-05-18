@@ -1,0 +1,20 @@
+.footerTitle {
+  color: rgb(255 255 255);
+  font-size: 1.25rem;
+  font-family: 'Nunito', sans-serif;
+  margin-block: 1.5em 2em;
+
+  @media (min-width: 65rem) {
+    margin-block: 0 2em;
+  }
+}
+
+.listWrapper {
+  margin-inline: auto;
+}
+
+.listWrapper li {
+  padding-block-end: 7px;
+  margin-block: 0.5em;
+  font-weight: 500;
+}

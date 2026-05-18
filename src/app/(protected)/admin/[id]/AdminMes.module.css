@@ -1,0 +1,17 @@
+.container {
+  padding-inline: 35px;
+  padding-block: 50px;
+}
+
+.title {
+  font-size: 28px;
+  margin-block: 1em;
+
+  @media (min-width: 48rem) {
+    font-size: clamp(32px, 4vw, 45px);
+  }
+}
+
+.para {
+  font-size: 18px;
+}

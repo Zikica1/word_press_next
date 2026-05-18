@@ -1,0 +1,136 @@
+.testCard {
+  display: grid;
+  gap: 3.75em;
+  flex: 0 0 100%;
+  transition: translate 0.5s ease;
+  text-align: center;
+
+  @media (min-width: 65rem) {
+    grid-template-columns:
+      minmax(1.18rem, 1fr)
+      repeat(2, minmax(0, 40rem))
+      minmax(1.18rem, 1fr);
+    gap: 0;
+  }
+}
+
+.gridContainerTest {
+  @media (min-width: 65rem) {
+    grid-template-columns:
+      minmax(1.18em, 1fr)
+      minmax(0, 50em)
+      minmax(0, 30em)
+      minmax(1.18em, 1fr);
+  }
+}
+
+.testImg {
+  @media (min-width: 65rem) {
+    grid-column: 2;
+  }
+}
+
+.testImgWrap {
+  position: relative;
+}
+
+.testImg img {
+  border-radius: 24px;
+}
+
+.testIcon {
+  display: none;
+
+  @media (min-width: 65rem) {
+    width: 5.375em;
+    height: 5.375em;
+    background-color: rgb(253 52 110);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+
+.testIcon svg {
+  fill: rgb(255 255 255);
+  width: 1.875em;
+  height: 1.875em;
+}
+
+.testCardDescription {
+  @media (min-width: 65rem) {
+    grid-column: 3;
+    text-align: left;
+    padding-inline-start: 6em;
+  }
+}
+
+.testCardDescription h3 {
+  color: rgb(var(--clr-header));
+  font-size: 1.25rem;
+  margin-block: 0.2em 1.66em;
+}
+
+.testCardDescription h3:has(+ .testText) {
+  @media (min-width: 48rem) {
+    font-size: 1.875rem;
+  }
+}
+
+.testText {
+  margin-block-end: 2.25em;
+  margin-inline: auto;
+}
+
+.starsContainer {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 65rem) {
+    justify-content: flex-start;
+  }
+}
+
+.starsContainer svg {
+  color: rgb(253 52 110);
+  font-size: 1rem;
+}
+
+.starsContainer ~ p {
+  margin-block: 1em;
+  margin-inline: auto;
+}
+
+.testButtonsContainer button {
+  width: 2.375em;
+  height: 2.375em;
+  margin-inline-end: 1em;
+  border-radius: 50%;
+  background-color: rgb(243, 244, 246);
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.testButtonsContainer button:hover,
+.testButtonsContainer button:focus-visible {
+  background-color: rgb(253 52 110);
+  box-shadow: -15px 5px 20px rgba(253 52 110/0.2);
+}
+
+.testButtonsContainer svg {
+  fill: rgb(114, 113, 113);
+  transition: fill 0.2s ease;
+}
+
+.testButtonsContainer button:hover svg,
+.testButtonsContainer button:focus-visible svg {
+  fill: rgb(255 255 255);
+}

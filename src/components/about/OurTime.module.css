@@ -1,0 +1,44 @@
+.ourTimeImgList {
+  display: grid;
+  gap: 2em;
+}
+
+.ourTimeHeadline {
+  text-align: center;
+}
+
+.ourTimePar {
+  color: rgb(253 52 110);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-inline: auto;
+
+  @media (min-width: 48rem) {
+    font-size: 1.25rem;
+  }
+}
+
+.ourTimeHead {
+  color: #081420;
+  font-size: 1.875rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 6px 37px 15px;
+
+  @media (min-width: 48rem) {
+    font-size: 3.125rem;
+    line-height: 1.2;
+  }
+}
+
+.ourTimeImgList {
+  margin-block-start: 5em;
+
+  @media (min-width: 48rem) {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(25ch, 1fr) minmax(25ch, 1fr)
+    );
+  }
+}

@@ -1,0 +1,82 @@
+.timeImgContainer {
+  margin-block-start: 5em;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1040px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.timeImgCard {
+  color: rgb(255 255 255);
+  position: relative;
+}
+
+.timeImgCard::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background-image: linear-gradient(180deg, #02060800 0%, #020608 100%);
+  border-radius: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.timeImgCard:hover::before {
+  opacity: 1;
+}
+
+.timeImgCard img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  filter: brightness(95%);
+}
+
+.timeDetailCard {
+  position: absolute;
+  z-index: 2;
+  bottom: 50px;
+  left: 50px;
+  text-align: left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.timeImgCard:hover .timeDetailCard {
+  opacity: 1;
+}
+
+.timeDetailCardTit {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-block: 0.55em 0.45em;
+}
+
+.timeImgCard:hover .timeDetailCardTit {
+  color: rgb(255 255 255);
+}
+
+.timeDetailCard h5 {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.timeIcons {
+  display: flex;
+  gap: 1.2em;
+}
+
+.timeDetailCard a {
+  color: rgb(255 255 255);
+  transition: all 0.3s ease;
+}
+
+.timeIcon:hover a {
+  color: rgb(var(--clr-pri));
+  transform: scale(0.9);
+}

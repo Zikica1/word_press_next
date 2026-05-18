@@ -1,0 +1,101 @@
+.serviceCard {
+  padding: 55px 45px 60px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+}
+
+.accounts:hover {
+  background-color: rgb(253 52 110);
+}
+
+.support:hover {
+  background-color: rgb(255 137 91);
+}
+
+.agency:hover {
+  background-color: rgb(96 1 211);
+}
+
+.api:hover {
+  background-color: rgb(252 220 0);
+}
+
+.serviceCard .icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.serviceCard:hover .icon {
+  background-color: rgb(255 255 255);
+}
+
+.accounts .icon {
+  background-color: rgb(253 52 110);
+  box-shadow: -7px 15px 50px rgba(253 52 110 / 0.4);
+}
+
+.support .icon {
+  background-color: rgb(255 137 91);
+  box-shadow: -7px 15px 50px rgba(255 137 91 / 0.4);
+}
+
+.agency .icon {
+  background-color: rgb(96 1 211);
+  box-shadow: -7px 15px 50px rgba(96 1 211 / 0.4);
+}
+
+.api .icon {
+  background-color: rgb(252 220 0);
+  box-shadow: -7px 15px 50px rgba(252 220 0 / 0.4);
+}
+
+.icon svg {
+  color: white;
+  font-size: 30px;
+}
+
+.accounts:hover .icon svg {
+  color: rgb(253 52 110);
+}
+
+.support:hover .icon svg {
+  color: rgb(255 137 91);
+}
+
+.agency:hover .icon svg {
+  color: rgb(96 1 211);
+}
+
+.api:hover .icon svg {
+  color: rgb(252 220 0);
+}
+
+.serviceCard h3 {
+  color: rgb(8 20 32);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.8em;
+  margin-block: 36px 20px;
+
+  @media (min-width: 48rem) {
+    font-size: 1.562rem;
+  }
+
+  @media (min-width: 65rem) {
+    font-size: 1.875rem;
+  }
+}
+
+.serviceCard p {
+  font-weight: 500;
+}
+
+.serviceCard:hover h3,
+.serviceCard:hover p {
+  color: #fff;
+}

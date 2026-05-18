@@ -1,0 +1,109 @@
+.contact {
+  background-color: #f2f4f6;
+  padding-inline: 2.18em;
+  padding-block: 3.5em 22.12em;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.contactInfo {
+  color: rgb(255 255 255);
+  background-color: rgb(var(--clr-pri));
+  border-radius: 24px;
+  text-align: center;
+  padding: 3.125em 0.937em;
+
+  @media (min-width: 48rem) {
+    padding: 3.123em 4.375em;
+  }
+}
+
+.contactInfo h2,
+.contactInfo h5 {
+  color: rgb(255 255 255) !important;
+}
+
+.contactInfo h1 {
+  line-height: 1.2;
+}
+
+.contactInfoWrap {
+  margin-block: 5em;
+  display: grid;
+
+  @media (min-width: 65rem) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*contact-location*/
+.contactLocation {
+  padding-block-start: 5.62em;
+}
+
+.contactLocation .contactLocationWrap h1 {
+  margin: 0.2em 0 0.4em;
+  line-height: 1.3;
+  max-width: 11.66em;
+
+  @media (min-width: 48rem) {
+    font-size: 2.5rem;
+  }
+
+  @media (min-width: 65rem) {
+    max-width: unset;
+  }
+}
+
+.contactLocationWrap {
+  display: grid;
+  gap: 4em;
+
+  @media (min-width: 65rem) {
+    grid-template-columns:
+      minmax(1.18rem, 1fr)
+      repeat(2, minmax(0, 40rem))
+      minmax(1.18rem, 1fr);
+    gap: 0;
+  }
+}
+
+.contactLeftCol {
+  @media (min-width: 65rem) {
+    grid-column: 2;
+  }
+}
+
+.contactRightCol {
+  @media (min-width: 65rem) {
+    padding-inline-start: 4em;
+    grid-column: 3;
+  }
+}
+
+.contactFormMap {
+  position: relative;
+  min-height: 25em;
+
+  @media (min-width: 65rem) {
+    height: 100%;
+  }
+}
+
+.contactFormMap > img {
+  filter: drop-shadow(-8px 5px 24px rgba(0 0 0/0.15));
+  min-height: 25em;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  @media (min-width: 65rem) {
+    height: 100%;
+  }
+}
+
+.contactFormMap a {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}

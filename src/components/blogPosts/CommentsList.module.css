@@ -1,0 +1,66 @@
+.comments {
+  background-color: rgb(232, 232, 235);
+  border-top-left-radius: 1.875em;
+  border-top-right-radius: 1.875em;
+  margin-block-start: 6.25em;
+}
+
+.commentsReviews {
+  color: rgb(255 255 255);
+  background-color: rgb(96 1 211);
+  border-top-left-radius: 1.875em;
+  border-top-right-radius: 1.875em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 2em 1em;
+}
+
+.commentsReviews p {
+  font-weight: 600;
+}
+
+.reviewsCount {
+  color: rgb(96 1 211);
+  background: rgb(255 255 255);
+  border-radius: 50%;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.571em;
+  padding-inline: 0.429em;
+}
+
+.commentsWrapper {
+  padding: 3.75em 1.875em 6.25em;
+}
+
+.commentsWrapper > *:nth-child(even) {
+  margin-inline-start: 1.25em;
+}
+
+.commentsList {
+  color: black;
+  background-color: rgb(255 255 255);
+  border-radius: 1.875em;
+  padding: 2.5em 1.56em;
+  margin-block-end: 0.5em;
+}
+
+.commentsUserWrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  margin-block-end: 2.5em;
+}
+
+.commentsUserWrap svg {
+  color: rgb(174, 174, 175);
+  width: 3.75em;
+  aspect-ratio: 1;
+}
+
+.commentsName {
+  font-weight: 600;
+  margin-block-end: 0.5em;
+}
