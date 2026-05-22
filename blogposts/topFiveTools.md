@@ -1,6 +1,6 @@
 ---
 title: 'Top 5 Tools for More Efficient Project Management'
-date: '12-11-2023'
+date: '12-11-2025'
 image: '/images/blogs/blog-img-3.webp'
 ---
 

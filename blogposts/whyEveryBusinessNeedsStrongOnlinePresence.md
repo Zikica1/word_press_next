@@ -1,6 +1,6 @@
 ---
 title: 'Why Every Business Needs a Strong Online Presence'
-date: '24-12-2026'
+date: '24-12-2025'
 image: '/images/blogs/blog-img-4.webp'
 ---
 

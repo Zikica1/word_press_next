@@ -4,26 +4,22 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import BloForm from '@/components/blogPosts/BloForm';
 import CommentsList from '@/components/blogPosts/CommentsList';
+import { getPostBySlug } from '@/lib/action/getPostBySlug';
+import { getBlogMetadata } from '@/lib/seo/metadata';
+import JsonLd from '@/components/jsonLD/JsonLd';
+import { getBlogPostJsonLd } from '@/lib/seo/structuredData';
 
-export const generateMetaData = async ({
+export const generateMetadata = async ({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) => {
-  const posts = getSortedPostsData();
   const { id } = await params;
+  const post = getPostBySlug(id);
 
-  const post = posts.find((post) => post.id === id);
+  if (!post) return notFound();
 
-  if (!post) {
-    return {
-      title: 'Post not found',
-    };
-  }
-
-  return {
-    title: post.title,
-  };
+  return getBlogMetadata(post);
 };
 
 export const generateStaticParams = () => {
@@ -36,15 +32,21 @@ export const revalidate = 60;
 export const dynamicParams = true;
 
 const Post = async ({ params }: { params: Promise<{ id: string }> }) => {
-  const posts = getSortedPostsData();
+  //const posts = getSortedPostsData();
   const { id } = await params;
 
-  if (!posts.find((post) => post.id === id)) notFound();
+  const post = getPostBySlug(id);
+
+  if (!post) notFound();
+  const jsonLd = getBlogPostJsonLd(post);
+
+  //if (!posts.find((post) => post.id === id)) notFound();
 
   const { title, image, data, contentHtml } = await getPostData(id);
 
   return (
     <main className={styles.post}>
+      <JsonLd data={jsonLd} />
       <Image
         className={styles.postImg}
         src={image}

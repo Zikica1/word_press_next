@@ -96,8 +96,8 @@ export type Pricing = {
 };
 
 export type BlogProps = {
-  limit: number;
-  variant: string;
+  limit?: number;
+  variant?: string;
 };
 
 export type FormStateCom = {
@@ -119,4 +119,16 @@ export type FormStateMessage = {
     text?: string[];
     form?: string[];
   };
+};
+
+export type BlogPost = {
+  slug: string;
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+  headline: string;
+  datePublished: string;
+  dateModified: string;
+  keywords: string[];
 };

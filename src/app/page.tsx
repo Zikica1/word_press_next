@@ -5,11 +5,11 @@ import Team from '@/components/home/team/Team';
 import Testimonial from '@/components/home/testimonial/Testimonial';
 import Pricing from '@/components/home/pricing/Pricing';
 import BlogPosts from '@/components/blogPosts/BlogPosts';
-import { metadata } from '@/lib/seo/metadata';
+import { homeMetadata } from '@/lib/seo/metadata';
 import JsonLd from '@/components/jsonLD/JsonLd';
 import { getHomeJsonLd } from '@/lib/seo/structuredData';
 
-export { metadata };
+export const metadata = homeMetadata();
 
 export default function Home() {
   const jsonLd = getHomeJsonLd();

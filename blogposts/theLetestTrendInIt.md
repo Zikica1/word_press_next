@@ -1,6 +1,6 @@
 ---
 title: 'The Latest Trend in IT What the Future Holds'
-date: '12-11-2023'
+date: '12-11-2026'
 image: '/images/blogs/blog-img-2.webp'
 ---
 
