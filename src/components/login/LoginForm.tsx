@@ -6,6 +6,7 @@ import { FormState } from '../../../types';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import LogoutButton from '../button/LogoutButton';
+// import { useRouter } from 'next/navigation';
 
 const initialState: FormState = {
   success: false,
@@ -17,6 +18,16 @@ const Auth = () => {
 
   const searchParams = useSearchParams();
   const from = searchParams.get('from') || '/';
+
+  // const router = useRouter();
+
+  // useEffect(() => {
+  //   if (state.success) {
+  //     window.location.href = from;
+  //     router.refresh();
+  //     router.push(from);
+  //   }
+  // }, [state.success, router, from]);
 
   return (
     <section className={styles.register}>

@@ -52,7 +52,7 @@ export const refreshToken = async () => {
       };
     }
 
-    if (user.refreshToken !== refreshToken) {
+    if (user.refreshToken !== refreshTokenValue) {
       return {
         success: false,
         errors: {
@@ -76,14 +76,15 @@ export const refreshToken = async () => {
 
     cookieStore.set('accessToken', accessToken, {
       httpOnly: true,
-      secure: false,
-      sameSite: 'lax',
+      secure: false, //vrati u u true
+      sameSite: 'lax', //vrati u none
       maxAge: 15 * 60,
+      path: '/',
     });
 
     return {
       success: true,
-      errors: {},
+      accessToken,
     };
   } catch (err) {
     console.error(err);

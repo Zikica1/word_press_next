@@ -3,11 +3,9 @@ import connectDB from '@/lib/db';
 import { NextResponse } from 'next/server';
 import { messageSchema } from '@/lib/validators/messageSchema';
 import { z } from 'zod';
-import { ROLES_LIST } from '@/config/roles_list';
-import { withAuth } from '@/lib/auth/withAuth';
 import { limiter } from '@/config/limiter';
 
-export const GET = withAuth(async function (_request) {
+export const GET = async () => {
   await connectDB();
 
   try {
@@ -20,7 +18,7 @@ export const GET = withAuth(async function (_request) {
       { status: 500 },
     );
   }
-}, ROLES_LIST.Admin);
+};
 
 export const POST = async (request: Request) => {
   const remaining = await limiter.removeTokens(1);

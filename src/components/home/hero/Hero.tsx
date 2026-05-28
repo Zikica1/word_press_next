@@ -94,6 +94,7 @@ const Hero = () => {
               src='/images/hero/hero-card-4.png'
               alt=''
               fill
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               style={{ objectFit: 'cover' }}
             />
           </div>

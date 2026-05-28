@@ -9,22 +9,33 @@ export const getUserFromCookies = async (): Promise<MyJwtPayload | null> => {
 
   if (!token) return null;
 
+  if (!process.env.ACCESS_TOKEN_SECRET) {
+    throw new Error('ACCESS_TOKEN_SECRET is not defined');
+  }
+
+  const secret = process.env.ACCESS_TOKEN_SECRET;
+
   try {
-    const decode = jwt.verify(
-      token,
-      process.env.ACCESS_TOKEN_SECRET!,
-    ) as MyJwtPayload;
-    return decode;
+    const decoded = jwt.verify(token, secret);
+
+    if (typeof decoded === 'string') return null;
+
+    return decoded as MyJwtPayload;
   } catch {
     const refreshResult = await refreshToken();
-    if (!refreshResult.success) return null;
 
-    const newToken = cookieStore.get('accessToken')?.value;
-    if (!newToken) return null;
+    if (!refreshResult.success || !refreshResult.accessToken) {
+      return null;
+    }
 
-    return jwt.verify(
-      newToken,
-      process.env.ACCESS_TOKEN_SECRET!,
-    ) as MyJwtPayload; //verify vraća payload
+    try {
+      const decoded = jwt.verify(refreshResult.accessToken, secret);
+
+      if (typeof decoded === 'string') return null;
+
+      return decoded as MyJwtPayload;
+    } catch {
+      return null;
+    }
   }
 };

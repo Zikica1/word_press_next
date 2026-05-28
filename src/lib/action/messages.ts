@@ -1,8 +1,11 @@
 'use server';
 
 import Messages from '../models/Messages';
+import connectDB from '../db';
 
 export const getAllMessagesFromDB = async () => {
+  await connectDB();
+
   try {
     const messages = await Messages.find().lean();
     return messages.map((msg) => ({

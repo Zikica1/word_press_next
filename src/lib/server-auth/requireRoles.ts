@@ -8,7 +8,7 @@ export const requireRoles = async (
   const user = await getUserFromCookies();
 
   if (!user) {
-    redirect(`/login?from=${pathname || '/admin'}`);
+    redirect(`/login?from=${encodeURIComponent(pathname || '/admin')}`);
   }
 
   const hasRole = user.UserInfo.roles.some((role) =>

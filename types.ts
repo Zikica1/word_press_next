@@ -18,7 +18,7 @@ export type MyJwtPayload = {
 
 export type FormState = {
   success: boolean;
-  errors: {
+  errors?: {
     username?: string[];
     email?: string[];
     password?: string[];

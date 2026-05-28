@@ -9,6 +9,7 @@ import { FormState } from '../../../../types';
 import jwt from 'jsonwebtoken';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
+import { revalidatePath } from 'next/cache';
 
 export const loginUser = async (
   prevState: FormState,
@@ -86,7 +87,7 @@ export const loginUser = async (
   cookiesStore.set('refreshToken', refreshToken, {
     httpOnly: true,
     secure: false, //ide true ali u dev se stavlja false
-    sameSite: 'lax', //u produkciji none u dev-u lax
+    sameSite: 'lax', //ostaje lax i u produkciji
     path: '/',
     ...(remember && { maxAge: 24 * 60 * 60 }),
   });
@@ -97,5 +98,6 @@ export const loginUser = async (
     maxAge: 15 * 60,
   });
 
+  revalidatePath('/', 'layout'); //resetuje keš cele aplikacije
   redirect(from);
 };
